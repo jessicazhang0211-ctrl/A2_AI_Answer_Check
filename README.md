@@ -1,5 +1,6 @@
 # AI Answer Check
 
+*Prose word count: about 1,440 (code, commands and file paths excluded).*
 
 A small intelligent interactive system for **selective reliance on AI answers**. A student asks about
 coursework rules; GPT answers and splits the answer into date, number and percentage claims; code checks
