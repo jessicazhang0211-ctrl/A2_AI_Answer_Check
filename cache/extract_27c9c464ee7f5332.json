@@ -1,0 +1,10 @@
+[
+ {
+  "text": "final exam will account for 80% of the module assessment",
+  "subject": "Module",
+  "attribute": "weight",
+  "type": "percent",
+  "value": "80%",
+  "in_answer": true
+ }
+]

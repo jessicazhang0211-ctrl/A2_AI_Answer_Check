@@ -1,0 +1,45 @@
+{
+  "title": "Module Handbook: Interactive Systems Project (fictional teaching material)",
+  "passages": [
+    {"id": "h2", "source": "Module Handbook 2026-27", "section": "2 Assessment overview", "updated": "2026-09-15", "superseded": false,
+     "text": "The module is assessed by two pieces of coursework. Coursework 1 is worth 30% of the module mark and Coursework 2 is worth 70%. There is no examination.",
+     "facts": [
+       {"subject": "Coursework 1", "attribute": "weight", "type": "percent", "value": "30", "span": "30%"},
+       {"subject": "Coursework 2", "attribute": "weight", "type": "percent", "value": "70", "span": "70%"}]},
+    {"id": "h31", "source": "Module Handbook 2026-27", "section": "3.1 Coursework 1", "updated": "2026-09-15", "superseded": false,
+     "text": "Coursework 1 is due on 4 December 2026 at 14:00. It must not exceed 1,500 words, excluding references, and is submitted as a single PDF.",
+     "facts": [
+       {"subject": "Coursework 1", "attribute": "deadline", "type": "date", "value": "12-04", "span": "4 December 2026"},
+       {"subject": "Coursework 1", "attribute": "word_limit", "type": "number", "value": "1500", "span": "1,500 words"}]},
+    {"id": "h32", "source": "Module Handbook 2026-27", "section": "3.2 Coursework 2", "updated": "2026-09-15", "superseded": false,
+     "text": "Coursework 2 is due on 22 January 2027 at 14:00. It must not exceed 2,500 words, excluding references and appendices.",
+     "facts": [
+       {"subject": "Coursework 2", "attribute": "deadline", "type": "date", "value": "01-22", "span": "22 January 2027"},
+       {"subject": "Coursework 2", "attribute": "word_limit", "type": "number", "value": "2500", "span": "2,500 words"}]},
+    {"id": "h5", "source": "Module Handbook 2026-27", "section": "5 Late submission", "updated": "2026-09-15", "superseded": false,
+     "text": "Work submitted after the deadline loses 10% of the available marks for each working day, for up to 3 working days. After that, the submission receives a mark of zero.",
+     "facts": [
+       {"subject": "Module", "attribute": "late_penalty_per_day", "type": "percent", "value": "10", "span": "10%"},
+       {"subject": "Module", "attribute": "late_max_days", "type": "number", "value": "3", "span": "3 working days"}]},
+    {"id": "h5old", "source": "Module Handbook 2025-26 (superseded)", "section": "5 Late submission", "updated": "2025-09-10", "superseded": true,
+     "text": "Work submitted after the deadline loses 5% of the available marks for each working day, for up to 5 working days.",
+     "facts": [
+       {"subject": "Module", "attribute": "late_penalty_per_day", "type": "percent", "value": "5", "span": "5%"},
+       {"subject": "Module", "attribute": "late_max_days", "type": "number", "value": "5", "span": "5 working days"}]},
+    {"id": "h6", "source": "Module Handbook 2026-27", "section": "6 Extensions", "updated": "2026-09-15", "superseded": false,
+     "text": "Students may request an extension of up to 5 working days using the extension request form, submitted before the deadline.",
+     "facts": [
+       {"subject": "Module", "attribute": "extension_max_days", "type": "number", "value": "5", "span": "5 working days"}]},
+    {"id": "h6old", "source": "Module Handbook 2025-26 (superseded)", "section": "6 Extensions", "updated": "2025-09-10", "superseded": true,
+     "text": "Students may request an extension of up to 7 days by emailing the module lead.",
+     "facts": [
+       {"subject": "Module", "attribute": "extension_max_days", "type": "number", "value": "7", "span": "7 days"}]},
+    {"id": "h7", "source": "Module Handbook 2026-27", "section": "7 Feedback", "updated": "2026-09-15", "superseded": false,
+     "text": "Marks and written feedback are returned within 20 working days of the deadline.",
+     "facts": [
+       {"subject": "Module", "attribute": "feedback_days", "type": "number", "value": "20", "span": "20 working days"}]},
+    {"id": "h8", "source": "Module Handbook 2026-27", "section": "8 Use of AI tools", "updated": "2026-09-15", "superseded": false,
+     "text": "Any use of AI tools must be declared in an appendix that names the tool and describes how it was used.",
+     "facts": []}
+  ]
+}

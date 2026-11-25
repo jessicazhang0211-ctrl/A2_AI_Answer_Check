@@ -1,0 +1,18 @@
+[
+ {
+  "text": "4 December",
+  "subject": "Coursework 1",
+  "attribute": "deadline",
+  "type": "date",
+  "value": "4 December",
+  "in_answer": true
+ },
+ {
+  "text": "30%",
+  "subject": "Coursework 1",
+  "attribute": "weight",
+  "type": "percent",
+  "value": "30%",
+  "in_answer": true
+ }
+]

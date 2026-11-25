@@ -1,0 +1,60 @@
+[
+ {"id": "s01", "question": "When is Coursework 1 due and how much is it worth?",
+  "answer": "Coursework 1 is due on 4 December at 14:00 and is worth 30% of the module mark.",
+  "claims": [
+   {"text": "due on 4 December", "subject": "Coursework 1", "attribute": "deadline", "type": "date", "value": "4 December", "gold": "supported"},
+   {"text": "worth 30% of the module mark", "subject": "Coursework 1", "attribute": "weight", "type": "percent", "value": "30%", "gold": "supported"}]},
+ {"id": "s02", "question": "What are the requirements for Coursework 1?",
+  "answer": "Coursework 1 is due on 4 December, has a limit of 1,800 words and is worth 30% of the module mark.",
+  "claims": [
+   {"text": "due on 4 December", "subject": "Coursework 1", "attribute": "deadline", "type": "date", "value": "4 December", "gold": "supported"},
+   {"text": "a limit of 1,800 words", "subject": "Coursework 1", "attribute": "word_limit", "type": "number", "value": "1,800", "gold": "conflict"},
+   {"text": "worth 30% of the module mark", "subject": "Coursework 1", "attribute": "weight", "type": "percent", "value": "30%", "gold": "supported"}]},
+ {"id": "s03", "question": "What happens if I submit my coursework late?",
+  "answer": "Late work loses 5% of the available marks per working day, for up to 5 working days.",
+  "claims": [
+   {"text": "loses 5% of the available marks per working day", "subject": "Module", "attribute": "late_penalty_per_day", "type": "percent", "value": "5%", "gold": "outdated"},
+   {"text": "for up to 5 working days", "subject": "Module", "attribute": "late_max_days", "type": "number", "value": "5", "gold": "outdated"}]},
+ {"id": "s04", "question": "Can I get an extension for Coursework 2?",
+  "answer": "You can request an extension of up to 5 working days using the extension request form. Coursework 2 is due on 22 January.",
+  "claims": [
+   {"text": "an extension of up to 5 working days", "subject": "Module", "attribute": "extension_max_days", "type": "number", "value": "5", "gold": "supported"},
+   {"text": "due on 22 January", "subject": "Coursework 2", "attribute": "deadline", "type": "date", "value": "22 January", "gold": "supported"}]},
+ {"id": "s05", "question": "Tell me about Coursework 2.",
+  "answer": "Coursework 2 is due on 29 January, has a 2,500-word limit and is worth 60% of the module mark.",
+  "claims": [
+   {"text": "due on 29 January", "subject": "Coursework 2", "attribute": "deadline", "type": "date", "value": "29 January", "gold": "conflict"},
+   {"text": "a 2,500-word limit", "subject": "Coursework 2", "attribute": "word_limit", "type": "number", "value": "2,500", "gold": "supported"},
+   {"text": "worth 60% of the module mark", "subject": "Coursework 2", "attribute": "weight", "type": "percent", "value": "60%", "gold": "conflict"}]},
+ {"id": "s06", "question": "When will I get feedback on Coursework 1?",
+  "answer": "Feedback is returned within 15 working days, and you need at least 40% to pass the coursework.",
+  "claims": [
+   {"text": "returned within 15 working days", "subject": "Module", "attribute": "feedback_days", "type": "number", "value": "15", "gold": "conflict"},
+   {"text": "at least 40% to pass", "subject": "Coursework 1", "attribute": "pass_mark", "type": "percent", "value": "40%", "gold": "missing"}]},
+ {"id": "s07", "question": "How is the module assessed?",
+  "answer": "There is a 2-hour exam worth 20%, Coursework 1 is worth 40% and Coursework 2 is worth 70%.",
+  "claims": [
+   {"text": "a 2-hour exam", "subject": "Exam", "attribute": "exam_duration_hours", "type": "number", "value": "2", "gold": "missing"},
+   {"text": "exam worth 20%", "subject": "Exam", "attribute": "weight", "type": "percent", "value": "20%", "gold": "missing"},
+   {"text": "Coursework 1 is worth 40%", "subject": "Coursework 1", "attribute": "weight", "type": "percent", "value": "40%", "gold": "conflict"},
+   {"text": "Coursework 2 is worth 70%", "subject": "Coursework 2", "attribute": "weight", "type": "percent", "value": "70%", "gold": "supported"}]},
+ {"id": "s08", "question": "What are the rules for late work and extensions?",
+  "answer": "Late submissions lose 10% per working day for up to 3 working days. Extensions of up to 7 days are available, and you can resubmit once within 10 days.",
+  "claims": [
+   {"text": "lose 10% per working day", "subject": "Module", "attribute": "late_penalty_per_day", "type": "percent", "value": "10%", "gold": "supported"},
+   {"text": "for up to 3 working days", "subject": "Module", "attribute": "late_max_days", "type": "number", "value": "3", "gold": "supported"},
+   {"text": "Extensions of up to 7 days", "subject": "Module", "attribute": "extension_max_days", "type": "number", "value": "7", "gold": "outdated"},
+   {"text": "resubmit once within 10 days", "subject": "Module", "attribute": "resubmission_days", "type": "number", "value": "10", "gold": "missing"}]},
+ {"id": "s09", "question": "What are the word limits for the two pieces of coursework?",
+  "answer": "Coursework 1 has a 1,500-word limit and Coursework 2 has a 3,000-word limit.",
+  "claims": [
+   {"text": "Coursework 1 has a 1,500-word limit", "subject": "Coursework 1", "attribute": "word_limit", "type": "number", "value": "1,500", "gold": "supported"},
+   {"text": "Coursework 2 has a 3,000-word limit", "subject": "Coursework 2", "attribute": "word_limit", "type": "number", "value": "3,000", "gold": "conflict"}]},
+ {"id": "s10", "question": "Can you summarise the deadlines and the late policy?",
+  "answer": "Coursework 1 is due on 4 December and Coursework 2 on 15 January. Late work loses 10% per working day and is accepted for up to 5 working days.",
+  "claims": [
+   {"text": "Coursework 1 is due on 4 December", "subject": "Coursework 1", "attribute": "deadline", "type": "date", "value": "4 December", "gold": "supported"},
+   {"text": "Coursework 2 on 15 January", "subject": "Coursework 2", "attribute": "deadline", "type": "date", "value": "15 January", "gold": "conflict"},
+   {"text": "loses 10% per working day", "subject": "Module", "attribute": "late_penalty_per_day", "type": "percent", "value": "10%", "gold": "supported"},
+   {"text": "accepted for up to 5 working days", "subject": "Module", "attribute": "late_max_days", "type": "number", "value": "5", "gold": "outdated"}]}
+]

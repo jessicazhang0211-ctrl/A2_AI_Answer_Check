@@ -1,0 +1,24 @@
+{
+ "A": {
+  "correct": 28,
+  "total": 28,
+  "confusion": {
+   "supported": {
+    "supported": 13
+   },
+   "conflict": {
+    "conflict": 7
+   },
+   "outdated": {
+    "outdated": 4
+   },
+   "missing": {
+    "missing": 4
+   }
+  },
+  "reminders": {
+   "false_reminders": 0,
+   "supported_claims": 13
+  }
+ }
+}

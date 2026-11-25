@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>AI Answer Check</title>
+<link rel="icon" href="data:,">
+<link rel="stylesheet" href="/static/style.css">
+</head>
+<body>
+<header class="top">
+  <div>
+    <h1>AI Answer Check</h1>
+    <p class="sub">Review an AI answer claim by claim before you rely on it.</p>
+  </div>
+  <div class="controls">
+    <div class="mode" role="radiogroup" aria-label="How uncertainty is shown">
+      <span class="mode-label">Cue</span>
+      <button role="radio" data-mode="none" aria-checked="false">No cue</button>
+      <button role="radio" data-mode="verbal" aria-checked="false">Verbal</button>
+      <button role="radio" data-mode="visual" aria-checked="true">Visual</button>
+    </div>
+    <span id="live" class="pill">checking…</span>
+  </div>
+</header>
+
+<main class="layout">
+  <nav class="side" aria-label="Questions">
+    <h2>Preset answers (backup)</h2>
+    <ol id="scenarios" class="scenarios"></ol>
+    <h2>Ask your own</h2>
+    <form id="ask">
+      <label for="q" class="visually-hidden">Your question</label>
+      <textarea id="q" rows="3" placeholder="e.g. What is the late penalty?"></textarea>
+      <fieldset class="src-pick">
+        <legend>Answer and check against</legend>
+        <label><input type="radio" name="source" value="demo" checked> Demo handbook</label>
+        <label><input type="radio" name="source" value="kb"> My documents</label>
+      </fieldset>
+      <button type="submit" class="primary">Ask</button>
+      <p id="ask-note" class="note"></p>
+    </form>
+    <h2>My documents</h2>
+    <form id="upload" class="upload">
+      <label for="file" class="visually-hidden">Document to upload</label>
+      <input id="file" type="file" accept=".txt,.md,.docx,.pdf">
+      <label class="small"><input type="checkbox" id="older"> This is an older version</label>
+      <button type="submit">Upload</button>
+      <p id="upload-note" class="note" aria-live="polite">Assignment briefs, handbooks or notes (.txt, .md, .docx, .pdf). Stored only on this computer.</p>
+    </form>
+    <ul id="docs" class="docs"></ul>
+    <details class="handbook">
+      <summary id="hb-summary">Open the source documents</summary>
+      <div id="handbook"></div>
+    </details>
+  </nav>
+
+  <section class="main" aria-live="polite">
+    <div id="empty" class="empty">
+      <p>Choose a question on the left. The AI answer is split into claims, and each claim is checked against the demo handbook or your own documents. You decide what to keep.</p>
+    </div>
+    <div id="result" hidden>
+      <div class="qa">
+        <p class="q-text" id="question"></p>
+        <div class="answer-box">
+          <p class="eyebrow">AI answer</p>
+          <p id="answer" class="answer"></p>
+          <p id="sources" class="meta"></p>
+        </div>
+      </div>
+      <p id="error" class="error" hidden></p>
+      <h2 class="cards-title">Review each claim</h2>
+      <div id="cards"></div>
+      <div id="revised-box" class="revised-box" hidden>
+        <h2 class="cards-title">Revised answer</h2>
+        <p id="revised-meta" class="meta"></p>
+        <p id="revised" class="answer"></p>
+        <p class="legend"><span class="rv revised"><del>old</del> <ins>corrected</ins></span> <span class="rv deferred">still to check</span> <span class="rv risky">kept, not confirmed</span> <span class="rv pending">not yet decided</span></p>
+      </div>
+    </div>
+  </section>
+
+  <aside class="review" id="review" hidden>
+    <h2>Your reviewed answer</h2>
+    <p id="progress" class="meta"></p>
+    <ul id="reviewed" class="reviewed"></ul>
+    <div id="summary" class="summary" hidden aria-live="polite"></div>
+    <section class="memory" aria-labelledby="mem-h">
+      <h2 id="mem-h">Across your questions</h2>
+      <div id="pattern"></div>
+      <h3>Facts you have checked</h3>
+      <ul id="facts" class="facts"></ul>
+      <button id="forget" class="link">Clear my review history</button>
+    </section>
+  </aside>
+</main>
+
+<dialog id="document-preview" class="doc-preview" aria-labelledby="preview-title">
+  <header class="preview-header">
+    <h2 id="preview-title">Document preview</h2>
+    <form method="dialog">
+      <button type="submit" autofocus>Close</button>
+    </form>
+  </header>
+  <div class="preview-body" role="region" aria-label="Document content" tabindex="0">
+    <p id="preview-status" class="meta" role="status"></p>
+    <div id="preview-content"></div>
+  </div>
+</dialog>
+
+<footer>The demo handbook is fictional. Your documents stay on this computer. GPT proposes the claims; code compares them with the source; you decide.</footer>
+<script src="/static/app.js"></script>
+</body>
+</html>
